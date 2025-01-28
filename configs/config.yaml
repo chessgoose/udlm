@@ -1,7 +1,7 @@
 defaults:
   - _self_
   - /callbacks: [checkpoint_every_n_steps, checkpoint_monitor, learning_rate_monitor]
-  - /data: lm1b
+  - /data: acyp
   - /model: small
   - /strategy: ddp
   - /noise: loglinear
@@ -10,14 +10,14 @@ defaults:
   - /guidance: null
 
 mode: train  # train / train_classifier / ppl_eval
-diffusion: absorbing_state
+diffusion: uniform
 backbone: dit  # dit / dimamba / ar
 classifier_backbone: null
-parameterization: subs  # subs / d3pm / ar
+parameterization: d3pm  # subs / d3pm / ar
 time_conditioning: False
 subs_masking: False
 zero_recon_loss: False  # Use for UDLM
-T: 0  # 0 (continuous time) / 1000
+T: 1000 # 0 (continuous time) / 1000
 
 is_vision: False
 seed: 1

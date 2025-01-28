@@ -1,0 +1,7 @@
+train: acyp
+valid: acyp
+tokenizer_name_or_path: acyp
+cache_dir: /gpfs/radev/scratch/dijk/lyz6/CaLMDD/data/AcyP/AcyP_original
+num_classes: 20
+wrap: True
+streaming: False
